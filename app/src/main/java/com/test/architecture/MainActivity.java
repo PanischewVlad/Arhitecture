@@ -7,7 +7,17 @@ import android.os.Bundle;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnStart;
+    Button btnStart; btnStart.setOnClickListener(view ->{
+        Intent intent = new Intent( this, SecondActivity.class);
+        startActivity(intent);
+    })
+    Button btnStart2; btnStart2.setOnClickListener(view ->
+
+    {
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+    })
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,9 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnStart = findViewById(R.id.btnStart);
 
-        btnStart.setOnClickListener(view ->{
-            Intent intent = new Intent( this, SecondActivity.class);
-            startActivity(intent);
-        });
+         btnStart2 = findViewById(R.id.btnStart2);
+
     }
 }
