@@ -8,11 +8,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.regex.Pattern;
+
 public class MainActivity extends AppCompatActivity {
     Button btnStart2;
     Button btnlogin;
     EditText etLogin;
     EditText etPassword;
+
 
 
     @Override
@@ -24,8 +27,9 @@ public class MainActivity extends AppCompatActivity {
         etLogin = findViewById(R.id.etLogin);
         etPassword = findViewById(R.id.etPassword);
 
+
         btnlogin.setOnClickListener(viev -> {
-            if (checkLogin(etLogin.getText().toString())
+            if (checkLogin()
                     &&
                     checkPassword(etPassword.getText().toString())){
                 startActivity();
@@ -42,19 +46,34 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
     private void  startActivity(){
         Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
 
     }
-    private  boolean checkLogin(String login){
-for(int i = 0; i<Utils.logins.length;i++){
-    if (Utils.logins[i].equals(login)) return  true;
-}
-        return false;
-    }
+
+
+
     private  boolean checkPassword(String password){
-return  password.equals(Utils.password);
+        int checkEtPassword = etPassword.length();
+
+        if ( checkEtPassword >= 8) {
+
+
+
+        }
+        return true;
+
     }
+
+    private boolean checkLogin(){
+        int checkEtLogin = etLogin.length();
+        if ( checkEtLogin > 3);
+        return true;
+
+    }
+
+
 
 }
