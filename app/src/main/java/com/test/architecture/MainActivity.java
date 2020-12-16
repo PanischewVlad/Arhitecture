@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.security.PublicKey;
 import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
@@ -71,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
         int checkEtLogin = etLogin.length();
         if ( checkEtLogin > 3);
         return true;
+
+    }
+    public static  void checkPassword() {
+        Pattern pattern1 = Pattern.compile("a-z");
+        Pattern pattern2 = Pattern.compile("A-Z");
 
     }
 
