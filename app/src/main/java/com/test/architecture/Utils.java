@@ -1,6 +1,21 @@
 package com.test.architecture;
 
+import java.util.ArrayList;
+
 public class Utils {
-    public static  String[] logins = {" login1", "login2"};
-    public static  String[] password = {" pass"};
+private  ArrayList<UserModel>users;
+    public  Utils()    {
+        users = new ArrayList<>();
+        users.add(new UserModel("login1", "Password1"));
+        users.add(new UserModel("login1", "Password1"));
+        users.add(new UserModel("login1", "Password1"));
+        users.add(new UserModel("login1", "Password1"));
+
+        }
+public  ArrayList<UserModel> getUsers(){
+return  users;
+    }
+    public void setUsers (ArrayList<UserModel> users){
+this.users = users;    }
 }
+
