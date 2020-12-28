@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
     EditText etPassword;
     ArrayList<UserModel>users;
     HashMap<String,UserModel> userTypes;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
 
         userTypes.put("ENGINEER", users.get(2));
+
 
 
 

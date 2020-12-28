@@ -3,7 +3,8 @@ package com.test.architecture;
 import java.util.ArrayList;
 
 public class Utils {
-private  ArrayList<UserModel>users;
+    public static UserModel[] users;
+    private  ArrayList<UserModel>users;
     public  Utils()    {
         users = new ArrayList<>();
         users.add(new UserModel("login1", "Password1"));
