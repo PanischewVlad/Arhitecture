@@ -46,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean checkLogin(String login, String password) {
-        for (UserModel userModel : Utils.users) {
-            if (userModel.getLogin().equals(login) && userModel.getPassword().equals(password))return true;
+    //    for (UserModel userModel : Utils.user) {
+        //    if (userModel.getLogin().equals(login) && userModel.getPassword().equals(password))return true;
 
 
-        }
+      //  }
         return false;
     }
 
