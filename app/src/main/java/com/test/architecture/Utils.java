@@ -3,20 +3,19 @@ package com.test.architecture;
 import java.util.ArrayList;
 
 public class Utils {
-    public static UserModel[] users;
+
     private  ArrayList<UserModel>users;
     public  Utils()    {
         users = new ArrayList<>();
         users.add(new UserModel("login1", "Password1"));
         users.add(new UserModel("login1", "Password1"));
         users.add(new UserModel("login1", "Password1"));
-        users.add(new UserModel("login1", "Password1"));
+
 
         }
 public  ArrayList<UserModel> getUsers(){
-return  users;
-    }
-    public void setUsers (ArrayList<UserModel> users){
-this.users = users;    }
+return  users;}
+
+    public void setUsers (ArrayList<UserModel> users){ this.users = users;}
 }
 
